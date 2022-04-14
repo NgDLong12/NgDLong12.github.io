@@ -145,7 +145,7 @@ html {
     position: relative;
     margin-top: 46.5px;
     padding-top: 50%;
-    background: url('/assets/img/bckgr3.jpg') top center / cover no-repeat;
+    background: url('/theband-web/assets/img/bckgr3.jpg') top center / cover no-repeat;
 }
 
 #slider .text-content {
