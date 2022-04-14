@@ -6,6 +6,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,9 +23,43 @@ html {
     text-align: center !important;
 }
 
+.pull-right {
+    float: right !important;
+}
+
+.btn {
+    margin-top: 18px;
+    padding: 11px 16px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
 .row {
     margin-left: -8px;
     margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .col {
@@ -145,7 +180,7 @@ html {
     position: relative;
     margin-top: 46.5px;
     padding-top: 50%;
-    background: url('/theband-web/assets/img/bckgr3.jpg') top center / cover no-repeat;
+    background: url('/assets/img/bckgr3.jpg') top center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -176,7 +211,7 @@ html {
 
 #content .content-section {
     width: 800px;
-    padding: 74px 0;
+    padding: 74px 0 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -211,12 +246,11 @@ html {
 
 
 #content .member-name {
-    margin-bottom: 15px;
     font-size: 15px;
 }
 
 #content .member-avatar {
-    margin-bottom: 26px;
+    margin-top: 15px;
     width: 154px;
     border-radius: 5%;
 }
@@ -294,26 +328,68 @@ html {
     line-height: 1.5;
 }
 
-.place-buy-btn {
-    margin-top: 18px;
-    padding: 11px 16px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
+
+/* contact-form */
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="fa-"] {
+    width: 35px;
     display: inline-block;
 }
 
-.place-buy-btn:hover {
-    background-color: #ccc;
-    color: #000;
-    cursor: pointer;
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* MAP SECTION */
+.map-section img {
+    width: 100%;
 }
 
 
 #footer {
-
+    padding: 64px 16px;
 }
+
+#footer .socials-list {
+    font-size: 22px;
+}
+
+#footer .socials-list a {
+    color: #757575;
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+    opacity: 0.6;
+    cursor: auto;
+}
+
+#footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    color: #757575;
+}
+
+#footer .copyright a {
+    color: #757575;
+}
+
+
 
 /* MODAL */
 .modal.open {
@@ -336,6 +412,7 @@ html {
 .modal-container {
     position: relative;
     width: 900px;
+    max-width: calc(100% - 32px);
     min-height: 200px;
     background-color: #fff;
     transform: translateY(-140px);
